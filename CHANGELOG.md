@@ -1,5 +1,17 @@
 # Windows changelog
 
+## 0.1.0-beta.6 — 2026-10-31
+
+### Added
+
+- Opt-in Diagnose action in the verification window. A native privacy confirmation precedes a bounded metadata-only capture during one ordinary catalogue check.
+- Filtered Chromium cookie inclusion/exclusion counts, partition flags, network-delegate blocking count and fixed reason codes in exported diagnostics. Cookie values, names, URLs and raw traces are excluded from the exported summary.
+
+### Changed
+
+- Temporary metadata can contain URLs and network details. Sensitive capture modes are never enabled. Temporary traces are removed after analysis; cleanup failures are reported and stale app-owned traces are retried at startup.
+- This is an investigation build. The site-verification issue remains unresolved; requests, browser identity and access protections are unchanged. The standalone updater is retained.
+
 ## 0.1.0-beta.5 — 2026-10-30
 
 ### Added

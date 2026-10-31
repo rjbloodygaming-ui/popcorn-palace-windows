@@ -58,3 +58,9 @@ Independent project; not affiliated with NEPU, Popcorn Palace, VRChat, Microsoft
 The verification issue remains unresolved in beta 5. The beta 4 diagnostic procedure below still applies.
 
 Beta 4 is a diagnostic build for the unresolved case where the website opens but the app catalogue request receives HTTP 403. It is not a confirmed access fix. With local diagnostic logging enabled, open **Verify site**, let its page load, select **Return to app** once, close the window, then use **Settings → Diagnostics → Export logs**. Observers record only client/route classes, cookie-presence flags, counts, response statuses and challenge flags. They do not modify requests, cookie values or browser protections. Logs remain local until explicitly exported.
+
+## Opt-in cookie-exclusion diagnosis (beta 6)
+
+Open **Verify site**, let its page load, and choose **Diagnose**. A native confirmation explains the privacy details before anything is captured. With local logging enabled, the action records a bounded metadata-only network trace during one ordinary catalogue check. Temporary metadata can include URLs/network details, but sensitive capture modes are never enabled. The app saves only request/cookie counts and fixed exclusion-reason codes to exported diagnostics, then deletes the temporary trace. Cleanup failures are reported and stale app-owned traces are retried at next startup. Raw traces are never included in diagnostic export.
+
+After diagnosis, close the verification window and use **Settings → Diagnostics → Export logs**. The summary covers cookies considered for that request; cookie names and values are excluded, so reasons are not assigned to named individual cookies. A missing matching request/event is inconclusive. This remains an investigation build, not a confirmed verification fix. It does not change requests, browser identity or access protections.

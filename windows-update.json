@@ -1,9 +1,9 @@
 {
-  "versionCode": 5,
-  "version": "0.1.0-beta.5",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.5-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.5/Popcorn-Palace-Windows-0.1.0-beta.5-win-x64.zip",
-  "sha256": "508fda531ee80eccbbb31d1ac00d0324169b7c288f33c4e9be948ebf4c1e0e5b",
-  "size": 214122738,
-  "notes": "Added:\n• PopcornPalaceUpdater.exe: a separate Windows updater with download progress and its own Install and restart button. The runtime is bundled; users do not need to install .NET.\n• Direct updater launch support. Both app-launched and directly launched updates run from a temporary copy outside the installation folder, allowing both EXEs to be replaced.\n\nFixed:\n• The main app stays open through download, checksum verification, extraction and rollback preparation. Only the updater’s confirmed install step requests app exit.\n• Native download verification, bounded ZIP extraction, file-lock retries and rollback replace the PowerShell installation helper.\n\nChanged:\n• The app’s update prompt now opens the separate updater window. Download and installation are performed by the second EXE. Saved history and favorites remain in the Windows profile.\n• The site-verification issue remains unresolved. Existing numeric verification diagnostics are retained."
+  "versionCode": 6,
+  "version": "0.1.0-beta.6",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.6-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.6/Popcorn-Palace-Windows-0.1.0-beta.6-win-x64.zip",
+  "sha256": "88822fa4167b9cc63fc37b9b34c8cfd2dd2ccc3d3d5192a966121308e7524b1d",
+  "size": 214126669,
+  "notes": "Added:\n\u2022 Opt-in Diagnose action in the verification window. A native privacy confirmation precedes a bounded metadata-only capture during one ordinary catalogue check.\n\u2022 Filtered Chromium cookie inclusion/exclusion counts, partition flags, network-delegate blocking count and fixed reason codes in exported diagnostics. Cookie values, names, URLs and raw traces are excluded from the exported summary.\n\nChanged:\n\u2022 Temporary metadata can contain URLs and network details. Sensitive capture modes are never enabled. Temporary traces are removed after analysis; cleanup failures are reported and stale app-owned traces are retried at startup.\n\u2022 This is an investigation build. The site-verification issue remains unresolved; requests, browser identity and access protections are unchanged. The standalone updater is retained."
 }
