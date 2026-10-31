@@ -1,9 +1,9 @@
 {
-  "versionCode": 4,
-  "version": "0.1.0-beta.4",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.4-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.4/Popcorn-Palace-Windows-0.1.0-beta.4-win-x64.zip",
-  "sha256": "c5a0435ba541146ad926009366411d9c38b03b8d5fc8b1d65cf222d89438d541",
-  "size": 167902849,
-  "notes": "Added:\n• Diagnostic build for the unresolved Windows verification failure. Observes whether the browser and background requests send cookies, whether the clearance cookie is present, and the resulting HTTP status.\n• Cookie-store presence and metadata checks, same-origin redirect flags, and separate challenge-header/markup flags. Logs contain numeric flags and counts only; cookie values, URLs, titles, credentials and raw headers are never recorded.\n\nFixed:\n• The verification toolbar now identifies the rejected application check and displays its HTTP status instead of repeatedly asking for an already completed site check.\n\nChanged:\n• Automatic access checking runs once per verification window; further checks require Return to app. Network requests, cookies and browser protections are not modified by the observers.\n• This is an investigation build, not a confirmed verification fix. Open Verify site, let the page load, select Return to app once, close the window and export diagnostics."
+  "versionCode": 5,
+  "version": "0.1.0-beta.5",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.5-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.5/Popcorn-Palace-Windows-0.1.0-beta.5-win-x64.zip",
+  "sha256": "508fda531ee80eccbbb31d1ac00d0324169b7c288f33c4e9be948ebf4c1e0e5b",
+  "size": 214122738,
+  "notes": "Added:\n• PopcornPalaceUpdater.exe: a separate Windows updater with download progress and its own Install and restart button. The runtime is bundled; users do not need to install .NET.\n• Direct updater launch support. Both app-launched and directly launched updates run from a temporary copy outside the installation folder, allowing both EXEs to be replaced.\n\nFixed:\n• The main app stays open through download, checksum verification, extraction and rollback preparation. Only the updater’s confirmed install step requests app exit.\n• Native download verification, bounded ZIP extraction, file-lock retries and rollback replace the PowerShell installation helper.\n\nChanged:\n• The app’s update prompt now opens the separate updater window. Download and installation are performed by the second EXE. Saved history and favorites remain in the Windows profile.\n• The site-verification issue remains unresolved. Existing numeric verification diagnostics are retained."
 }

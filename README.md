@@ -33,7 +33,7 @@ Use **Verify site**, complete any site check in the page below the toolbar, then
 
 This repository is independent of the Android repository. The app checks `windows-update.json` when it opens and periodically when it returns to the foreground. Updates require approval, then download from this repository's GitHub Releases. The app validates the exact repository/asset URL, version, byte size and SHA-256 before offering **Install and restart**.
 
-The portable updater uses Windows PowerShell to check the checksum again, extract the package and save a rollback copy before the app closes. Once ready, it waits for the app to exit, replaces application files in place with retries for locked files, and restarts it. It does not rename the installation directory. Your library stays in your Windows user profile, outside the app folder. Replaced files are retained under the app profile’s `updates/install-…/previous` directory for rollback. Numeric install stages and Windows error codes are included in exported diagnostics. Folders that require administrator rights cannot be updated automatically; extract a new download into a writable folder instead.
+`PopcornPalaceUpdater.exe` is a separate, self-contained Windows program included beside `PopcornPalace.exe`. Choose **Open updater** in the app: the updater opens its own progress window, downloads the ZIP, checks its size and SHA-256, extracts it and saves rollback files while the main app stays open. Choose **Install and restart** in the updater to close the app, replace the files in place and restart it. The updater runs from a copy outside the installation folder so both EXEs can be replaced. It does not use PowerShell and does not require a separate .NET installation. Your library stays in your Windows profile. Rollback copies remain under the profile’s `updates/updater-…/previous` directory. Numeric failure stages are included in exported diagnostics. Folders that require administrator rights cannot be updated automatically; extract a new download into a writable folder instead. You can also open `PopcornPalaceUpdater.exe` directly; when launched directly, close the main app when prompted.
 
 ## Shortcuts
 
@@ -54,5 +54,7 @@ This repository hosts **release packages and publishing metadata/documentation o
 Independent project; not affiliated with NEPU, Popcorn Palace, VRChat, Microsoft or Electron.
 
 ## Windows verification investigation
+
+The verification issue remains unresolved in beta 5. The beta 4 diagnostic procedure below still applies.
 
 Beta 4 is a diagnostic build for the unresolved case where the website opens but the app catalogue request receives HTTP 403. It is not a confirmed access fix. With local diagnostic logging enabled, open **Verify site**, let its page load, select **Return to app** once, close the window, then use **Settings → Diagnostics → Export logs**. Observers record only client/route classes, cookie-presence flags, counts, response statuses and challenge flags. They do not modify requests, cookie values or browser protections. Logs remain local until explicitly exported.

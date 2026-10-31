@@ -1,5 +1,22 @@
 # Windows changelog
 
+## 0.1.0-beta.5 — 2026-10-30
+
+### Added
+
+- PopcornPalaceUpdater.exe: a separate Windows updater with download progress and its own Install and restart button. The runtime is bundled; users do not need to install .NET.
+- Direct updater launch support. Both app-launched and directly launched updates run from a temporary copy outside the installation folder, allowing both EXEs to be replaced.
+
+### Fixed
+
+- The main app stays open through download, checksum verification, extraction and rollback preparation. Only the updater’s confirmed install step requests app exit.
+- Native download verification, bounded ZIP extraction, file-lock retries and rollback replace the PowerShell installation helper.
+
+### Changed
+
+- The app’s update prompt now opens the separate updater window. Download and installation are performed by the second EXE. Saved history and favorites remain in the Windows profile.
+- The site-verification issue remains unresolved. Existing numeric verification diagnostics are retained.
+
 ## 0.1.0-beta.4 — 2026-10-30
 
 ### Added
