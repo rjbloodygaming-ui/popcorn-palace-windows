@@ -1,9 +1,9 @@
 {
-  "versionCode": 7,
-  "version": "0.1.0-beta.7",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.7-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.7/Popcorn-Palace-Windows-0.1.0-beta.7-win-x64.zip",
-  "sha256": "5db19afacf40b55875fbcc96f57c974989a5dfea33033320419ad8eb81ab5fe8",
-  "size": 214132528,
-  "notes": "Added:\n• A force-close choice for unresponsive processes after normal closure is attempted. It is limited to this installation; the updater and other installation folders are excluded. Declining stops the install.\n• Numeric close-request, force-stop-request and remaining-process counts in exported updater diagnostics.\n\nFixed:\n• The standalone updater now requests main-app window closure directly, including when launched outside the app, rather than depending on the app’s status-file monitor.\n• The updater waits for path-matched main/player processes to exit, then checks exclusive access to existing application files before replacement. Persistent locks stop installation before copying.\n\nChanged:\n• The separate updater still verifies downloads and prepares rollback files before requesting app closure. History and favorites stay in the Windows profile.\n• Existing verification diagnostics are retained. The site-verification issue remains unresolved."
+  "versionCode": 8,
+  "version": "0.1.0-beta.8",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.8-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.8/Popcorn-Palace-Windows-0.1.0-beta.8-win-x64.zip",
+  "sha256": "a046c4cc7bdfd1d92029ed1498f9f789a34cb4c265f947da280a41e50ce02817",
+  "size": 214132962,
+  "notes": "Fixed:\n• Removed the automatic catalogue check on the first verification page load, which could occur while the CAPTCHA was still displayed.\n\nChanged:\n• Verification now waits for you to complete the CAPTCHA and press Verify & return. That action flushes the latest cookies before checking actual app catalogue access.\n• Page loads alone neither read verification cookies nor trigger catalogue checks. Diagnose remains an explicit, confirmed action.\n• This fixes the premature check timing; successful access to the site still needs confirmation on Windows. The beta 7 standalone updater is retained."
 }

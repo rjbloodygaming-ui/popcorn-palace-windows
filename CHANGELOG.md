@@ -1,5 +1,17 @@
 # Windows changelog
 
+## 0.1.0-beta.8 — 2026-10-31
+
+### Fixed
+
+- Removed the automatic catalogue check on the first verification page load, which could occur while the CAPTCHA was still displayed.
+
+### Changed
+
+- Verification now waits for you to complete the CAPTCHA and press Verify & return. That action flushes the latest cookies before checking actual app catalogue access.
+- Page loads alone neither read verification cookies nor trigger catalogue checks. Diagnose remains an explicit, confirmed action.
+- This fixes the premature check timing; successful access to the site still needs confirmation on Windows. The beta 7 standalone updater is retained.
+
 ## 0.1.0-beta.7 — 2026-10-31
 
 ### Added
