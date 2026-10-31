@@ -1,5 +1,21 @@
 # Windows changelog
 
+## 0.1.0-beta.4 — 2026-10-30
+
+### Added
+
+- Diagnostic build for the unresolved Windows verification failure. Observes whether the browser and background requests send cookies, whether the clearance cookie is present, and the resulting HTTP status.
+- Cookie-store presence and metadata checks, same-origin redirect flags, and separate challenge-header/markup flags. Logs contain numeric flags and counts only; cookie values, URLs, titles, credentials and raw headers are never recorded.
+
+### Fixed
+
+- The verification toolbar now identifies the rejected application check and displays its HTTP status instead of repeatedly asking for an already completed site check.
+
+### Changed
+
+- Automatic access checking runs once per verification window; further checks require Return to app. Network requests, cookies and browser protections are not modified by the observers.
+- This is an investigation build, not a confirmed verification fix. Open Verify site, let the page load, select Return to app once, close the window and export diagnostics.
+
 ## 0.1.0-beta.3 — 2026-10-30
 
 ### Added

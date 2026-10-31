@@ -52,3 +52,7 @@ The catalogue and streaming depend on NEPU and supported codecs. Verification mu
 This repository hosts **release packages and publishing metadata/documentation only**. Application source is private. The Electron package necessarily contains compiled/packaged application code needed to run; it is not a source-code protection mechanism. No signing keys, API keys, site sessions or user logs belong in this repository.
 
 Independent project; not affiliated with NEPU, Popcorn Palace, VRChat, Microsoft or Electron.
+
+## Windows verification investigation
+
+Beta 4 is a diagnostic build for the unresolved case where the website opens but the app catalogue request receives HTTP 403. It is not a confirmed access fix. With local diagnostic logging enabled, open **Verify site**, let its page load, select **Return to app** once, close the window, then use **Settings → Diagnostics → Export logs**. Observers record only client/route classes, cookie-presence flags, counts, response statuses and challenge flags. They do not modify requests, cookie values or browser protections. Logs remain local until explicitly exported.

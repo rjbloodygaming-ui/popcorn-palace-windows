@@ -1,9 +1,9 @@
 {
-  "versionCode": 3,
-  "version": "0.1.0-beta.3",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.3-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.3/Popcorn-Palace-Windows-0.1.0-beta.3-win-x64.zip",
-  "sha256": "0f95643cc65b2f8512f0d208412fd0607cbe5f6596dd5a0076441da6ee063cf8",
-  "size": 167900756,
-  "notes": "Added:\n• Numeric update installation stages, Windows error codes and rollback status in exported diagnostics.\n• A visible preparing-update state that prevents repeated install clicks.\n\nFixed:\n• Replaced whole-folder renaming with in-place application file replacement, with retries for files still locked by Windows.\n• The app stays open while the update helper checks the package, extracts it, tests write access and saves rollback files. It only exits after the helper reports ready.\n• Preparation errors remain visible in the app. Failed replacement attempts restore saved files and reopen the previous app when recovery succeeds.\n\nChanged:\n• Users on beta 1 or beta 2 whose installer closes without restarting should manually extract this ZIP into a new writable folder once. Saved history and favorites remain in the Windows profile."
+  "versionCode": 4,
+  "version": "0.1.0-beta.4",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.4-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.4/Popcorn-Palace-Windows-0.1.0-beta.4-win-x64.zip",
+  "sha256": "c5a0435ba541146ad926009366411d9c38b03b8d5fc8b1d65cf222d89438d541",
+  "size": 167902849,
+  "notes": "Added:\n• Diagnostic build for the unresolved Windows verification failure. Observes whether the browser and background requests send cookies, whether the clearance cookie is present, and the resulting HTTP status.\n• Cookie-store presence and metadata checks, same-origin redirect flags, and separate challenge-header/markup flags. Logs contain numeric flags and counts only; cookie values, URLs, titles, credentials and raw headers are never recorded.\n\nFixed:\n• The verification toolbar now identifies the rejected application check and displays its HTTP status instead of repeatedly asking for an already completed site check.\n\nChanged:\n• Automatic access checking runs once per verification window; further checks require Return to app. Network requests, cookies and browser protections are not modified by the observers.\n• This is an investigation build, not a confirmed verification fix. Open Verify site, let the page load, select Return to app once, close the window and export diagnostics."
 }
