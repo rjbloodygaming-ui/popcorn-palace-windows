@@ -1,9 +1,9 @@
 {
-  "versionCode": 6,
-  "version": "0.1.0-beta.6",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.6-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.6/Popcorn-Palace-Windows-0.1.0-beta.6-win-x64.zip",
-  "sha256": "88822fa4167b9cc63fc37b9b34c8cfd2dd2ccc3d3d5192a966121308e7524b1d",
-  "size": 214126669,
-  "notes": "Added:\n\u2022 Opt-in Diagnose action in the verification window. A native privacy confirmation precedes a bounded metadata-only capture during one ordinary catalogue check.\n\u2022 Filtered Chromium cookie inclusion/exclusion counts, partition flags, network-delegate blocking count and fixed reason codes in exported diagnostics. Cookie values, names, URLs and raw traces are excluded from the exported summary.\n\nChanged:\n\u2022 Temporary metadata can contain URLs and network details. Sensitive capture modes are never enabled. Temporary traces are removed after analysis; cleanup failures are reported and stale app-owned traces are retried at startup.\n\u2022 This is an investigation build. The site-verification issue remains unresolved; requests, browser identity and access protections are unchanged. The standalone updater is retained."
+  "versionCode": 7,
+  "version": "0.1.0-beta.7",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.7-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.7/Popcorn-Palace-Windows-0.1.0-beta.7-win-x64.zip",
+  "sha256": "5db19afacf40b55875fbcc96f57c974989a5dfea33033320419ad8eb81ab5fe8",
+  "size": 214132528,
+  "notes": "Added:\n• A force-close choice for unresponsive processes after normal closure is attempted. It is limited to this installation; the updater and other installation folders are excluded. Declining stops the install.\n• Numeric close-request, force-stop-request and remaining-process counts in exported updater diagnostics.\n\nFixed:\n• The standalone updater now requests main-app window closure directly, including when launched outside the app, rather than depending on the app’s status-file monitor.\n• The updater waits for path-matched main/player processes to exit, then checks exclusive access to existing application files before replacement. Persistent locks stop installation before copying.\n\nChanged:\n• The separate updater still verifies downloads and prepares rollback files before requesting app closure. History and favorites stay in the Windows profile.\n• Existing verification diagnostics are retained. The site-verification issue remains unresolved."
 }

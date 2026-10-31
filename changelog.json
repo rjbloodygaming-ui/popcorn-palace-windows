@@ -1,6 +1,23 @@
 {
   "releases": [
     {
+      "version": "0.1.0-beta.7",
+      "versionCode": 7,
+      "date": "2026-10-31",
+      "Fixed": [
+        "The standalone updater now requests main-app window closure directly, including when launched outside the app, rather than depending on the app\u2019s status-file monitor.",
+        "The updater waits for path-matched main/player processes to exit, then checks exclusive access to existing application files before replacement. Persistent locks stop installation before copying."
+      ],
+      "Added": [
+        "A force-close choice for unresponsive processes after normal closure is attempted. It is limited to this installation; the updater and other installation folders are excluded. Declining stops the install.",
+        "Numeric close-request, force-stop-request and remaining-process counts in exported updater diagnostics."
+      ],
+      "Changed": [
+        "The separate updater still verifies downloads and prepares rollback files before requesting app closure. History and favorites stay in the Windows profile.",
+        "Existing verification diagnostics are retained. The site-verification issue remains unresolved."
+      ]
+    },
+    {
       "version": "0.1.0-beta.6",
       "versionCode": 6,
       "date": "2026-10-31",

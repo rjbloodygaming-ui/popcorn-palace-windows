@@ -1,5 +1,22 @@
 # Windows changelog
 
+## 0.1.0-beta.7 — 2026-10-31
+
+### Added
+
+- A force-close choice for unresponsive processes after normal closure is attempted. It is limited to this installation; the updater and other installation folders are excluded. Declining stops the install.
+- Numeric close-request, force-stop-request and remaining-process counts in exported updater diagnostics.
+
+### Fixed
+
+- The standalone updater now requests main-app window closure directly, including when launched outside the app, rather than depending on the app’s status-file monitor.
+- The updater waits for path-matched main/player processes to exit, then checks exclusive access to existing application files before replacement. Persistent locks stop installation before copying.
+
+### Changed
+
+- The separate updater still verifies downloads and prepares rollback files before requesting app closure. History and favorites stay in the Windows profile.
+- Existing verification diagnostics are retained. The site-verification issue remains unresolved.
+
 ## 0.1.0-beta.6 — 2026-10-31
 
 ### Added
