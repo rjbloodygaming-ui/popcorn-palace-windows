@@ -1,9 +1,9 @@
 {
-  "versionCode": 2,
-  "version": "0.1.0-beta.2",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.2-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.2/Popcorn-Palace-Windows-0.1.0-beta.2-win-x64.zip",
-  "sha256": "1cb96481fbaca55ec70bcc07e7051abc58ab5e15ba110b87b5a15f2fd640eaca",
-  "size": 167898280,
-  "notes": "Added:\n\u2022 Verification-stage and parsed-catalogue-count events in the existing privacy-filtered local diagnostics.\n\nFixed:\n\u2022 The site-verification window now has a persistent Return to app toolbar. It confirms catalogue access using the same session before returning and retrying the interrupted search, title or episode.\n\u2022 Closing or cancelling verification no longer reports successful verification. Failed checks stay visible in the window; completion never overrides a different screen opened later.\n\u2022 Ordinary pages containing a Cloudflare Turnstile widget are no longer automatically treated as blocked pages. Actual challenge response headers and interstitials are still respected.\n\u2022 Application requests retain the verified browser user agent and same-origin request context while keeping cookies restricted to their original origin.\n\nChanged:\n\u2022 The site remains in an isolated browser view with no application bridge or Node access. The Return to app toolbar is trusted local content. No challenge solving or protection bypass is automated."
+  "versionCode": 3,
+  "version": "0.1.0-beta.3",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.3-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.3/Popcorn-Palace-Windows-0.1.0-beta.3-win-x64.zip",
+  "sha256": "0f95643cc65b2f8512f0d208412fd0607cbe5f6596dd5a0076441da6ee063cf8",
+  "size": 167900756,
+  "notes": "Added:\n• Numeric update installation stages, Windows error codes and rollback status in exported diagnostics.\n• A visible preparing-update state that prevents repeated install clicks.\n\nFixed:\n• Replaced whole-folder renaming with in-place application file replacement, with retries for files still locked by Windows.\n• The app stays open while the update helper checks the package, extracts it, tests write access and saves rollback files. It only exits after the helper reports ready.\n• Preparation errors remain visible in the app. Failed replacement attempts restore saved files and reopen the previous app when recovery succeeds.\n\nChanged:\n• Users on beta 1 or beta 2 whose installer closes without restarting should manually extract this ZIP into a new writable folder once. Saved history and favorites remain in the Windows profile."
 }

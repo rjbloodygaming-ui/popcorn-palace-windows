@@ -29,9 +29,11 @@ Use **Verify site**, complete any site check in the page below the toolbar, then
 
 ## Updates
 
+**Upgrading from beta 1 or beta 2:** if Install and restart closes the app without reopening, download the latest ZIP from Releases, extract **all** files into a new writable folder, and run `PopcornPalace.exe`. This one-time manual update installs the corrected updater. History and favorites remain in your Windows profile.
+
 This repository is independent of the Android repository. The app checks `windows-update.json` when it opens and periodically when it returns to the foreground. Updates require approval, then download from this repository's GitHub Releases. The app validates the exact repository/asset URL, version, byte size and SHA-256 before offering **Install and restart**.
 
-The portable updater uses Windows PowerShell to wait for the app to close, check the checksum again, extract the package, replace the application folder and restart it. Your library stays in your Windows user profile, outside the app folder. A `.previous-update-…` folder is retained alongside the app for rollback; you may remove an old application backup after confirming the update works. Folders that require administrator rights cannot be updated automatically; extract a new download into a writable folder instead.
+The portable updater uses Windows PowerShell to check the checksum again, extract the package and save a rollback copy before the app closes. Once ready, it waits for the app to exit, replaces application files in place with retries for locked files, and restarts it. It does not rename the installation directory. Your library stays in your Windows user profile, outside the app folder. Replaced files are retained under the app profile’s `updates/install-…/previous` directory for rollback. Numeric install stages and Windows error codes are included in exported diagnostics. Folders that require administrator rights cannot be updated automatically; extract a new download into a writable folder instead.
 
 ## Shortcuts
 

@@ -1,5 +1,22 @@
 # Windows changelog
 
+## 0.1.0-beta.3 — 2026-10-30
+
+### Added
+
+- Numeric update installation stages, Windows error codes and rollback status in exported diagnostics.
+- A visible preparing-update state that prevents repeated install clicks.
+
+### Fixed
+
+- Replaced whole-folder renaming with in-place application file replacement, with retries for files still locked by Windows.
+- The app stays open while the update helper checks the package, extracts it, tests write access and saves rollback files. It only exits after the helper reports ready.
+- Preparation errors remain visible in the app. Failed replacement attempts restore saved files and reopen the previous app when recovery succeeds.
+
+### Changed
+
+- Users on beta 1 or beta 2 whose installer closes without restarting should manually extract this ZIP into a new writable folder once. Saved history and favorites remain in the Windows profile.
+
 ## 0.1.0-beta.2 — 2026-10-30
 
 ### Added
