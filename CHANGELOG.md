@@ -1,5 +1,18 @@
 # Windows changelog
 
+## 0.1.0-beta.10 — 2026-10-31
+
+### Fixed
+
+- The visible verification page now opens the same catalogue URL that the app checks, instead of opening the homepage while checking a different page.
+- The visible page, manual app confirmation and opt-in cookie diagnosis share one catalogue target.
+
+### Changed
+
+- Complete any challenge on the catalogue page, wait until catalogue cards appear, then select Verify & return. No automatic completion or challenge solving is performed.
+- This tests the homepage-versus-catalogue mismatch. Site acceptance still needs confirmation on Windows; a successful homepage alone is insufficient.
+- The default-browser fallback and standalone updater are retained.
+
 ## 0.1.0-beta.9 — 2026-10-31
 
 ### Added

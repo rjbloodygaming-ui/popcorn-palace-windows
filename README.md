@@ -12,7 +12,7 @@ No Java, VLC, Android emulator or separate browser runtime is required. This fir
 
 ## Site verification
 
-Use **Verify site**, complete any CAPTCHA, and wait until the actual site appears below the toolbar. Then choose **Verify & return**. Page loads never trigger an automatic catalogue check. Only your button press flushes the latest session cookies and checks app access (or choose Diagnose for an explicitly confirmed diagnostic check). It returns only when its own catalogue request succeeds, then retries your interrupted action. If access is still blocked, the window stays open and shows the result; closing it does not claim verification succeeded.
+Use **Verify site**, complete any challenge for the catalogue, and wait until catalogue cards appear below the toolbar. The visible window now opens the same catalogue URL used by the app confirmation check, rather than the homepage. Then choose **Verify & return**. Page loads never trigger an automatic catalogue check. Only your button press flushes the latest session cookies and checks app access (or choose Diagnose for an explicitly confirmed diagnostic check). It returns only when its own catalogue request succeeds, then retries your interrupted action. If access is still blocked, the window stays open and shows the result; closing it does not claim verification succeeded.
 
 If the app check remains blocked, choose **Open in browser** in the verification toolbar to open the configured site homepage in your default browser. Browse and watch directly there. No app cookies or saved data are transferred; browser playback does not update the app’s history or resume positions. This fallback does not repair or claim successful native app verification.
 
