@@ -1,9 +1,9 @@
 {
-  "versionCode": 8,
-  "version": "0.1.0-beta.8",
-  "asset": "Popcorn-Palace-Windows-0.1.0-beta.8-win-x64.zip",
-  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.8/Popcorn-Palace-Windows-0.1.0-beta.8-win-x64.zip",
-  "sha256": "a046c4cc7bdfd1d92029ed1498f9f789a34cb4c265f947da280a41e50ce02817",
-  "size": 214132962,
-  "notes": "Fixed:\n• Removed the automatic catalogue check on the first verification page load, which could occur while the CAPTCHA was still displayed.\n\nChanged:\n• Verification now waits for you to complete the CAPTCHA and press Verify & return. That action flushes the latest cookies before checking actual app catalogue access.\n• Page loads alone neither read verification cookies nor trigger catalogue checks. Diagnose remains an explicit, confirmed action.\n• This fixes the premature check timing; successful access to the site still needs confirmation on Windows. The beta 7 standalone updater is retained."
+  "versionCode": 9,
+  "version": "0.1.0-beta.9",
+  "asset": "Popcorn-Palace-Windows-0.1.0-beta.9-win-x64.zip",
+  "url": "https://github.com/rjbloodygaming-ui/popcorn-palace-windows/releases/download/windows-v0.1.0-beta.9/Popcorn-Palace-Windows-0.1.0-beta.9-win-x64.zip",
+  "sha256": "865ac8d9fa8368a8c2ff72a398d5a6e884792dc335b42d8e25361cc24923a96c",
+  "size": 214133636,
+  "notes": "Added:\n• Open in browser in the verification toolbar launches the configured site homepage in your default browser for direct, user-controlled browsing and watching.\n\nChanged:\n• The fallback sends no app cookies, credentials, history or playback data to the browser. Browser sessions and playback progress are separate; app verification is not marked successful.\n• The toolbar explains the separate browser session and handles Windows browser-launch failures.\n• Manual Verify & return, opt-in diagnosis and the standalone updater are retained. Native app catalogue verification remains unresolved."
 }

@@ -1,5 +1,17 @@
 # Windows changelog
 
+## 0.1.0-beta.9 — 2026-10-31
+
+### Added
+
+- Open in browser in the verification toolbar launches the configured site homepage in your default browser for direct, user-controlled browsing and watching.
+
+### Changed
+
+- The fallback sends no app cookies, credentials, history or playback data to the browser. Browser sessions and playback progress are separate; app verification is not marked successful.
+- The toolbar explains the separate browser session and handles Windows browser-launch failures.
+- Manual Verify & return, opt-in diagnosis and the standalone updater are retained. Native app catalogue verification remains unresolved.
+
 ## 0.1.0-beta.8 — 2026-10-31
 
 ### Fixed
