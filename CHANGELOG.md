@@ -1,5 +1,22 @@
 # Windows changelog
 
+## 0.1.0-beta.2 — 2026-10-30
+
+### Added
+
+- Verification-stage and parsed-catalogue-count events in the existing privacy-filtered local diagnostics.
+
+### Fixed
+
+- The site-verification window now has a persistent Return to app toolbar. It confirms catalogue access using the same session before returning and retrying the interrupted search, title or episode.
+- Closing or cancelling verification no longer reports successful verification. Failed checks stay visible in the window; completion never overrides a different screen opened later.
+- Ordinary pages containing a Cloudflare Turnstile widget are no longer automatically treated as blocked pages. Actual challenge response headers and interstitials are still respected.
+- Application requests retain the verified browser user agent and same-origin request context while keeping cookies restricted to their original origin.
+
+### Changed
+
+- The site remains in an isolated browser view with no application bridge or Node access. The Return to app toolbar is trusted local content. No challenge solving or protection bypass is automated.
+
 ## 0.1.0-beta.1 — 2026-10-30
 
 ### Added

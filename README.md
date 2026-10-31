@@ -10,6 +10,10 @@ Portable desktop port of Popcorn Palace Mobile, based on the Android 0.6.24 beha
 
 No Java, VLC, Android emulator or separate browser runtime is required. This first beta is not Authenticode signed. It has been packaged and tested with automated parser/library/UI checks; installation and streaming still need real Windows verification.
 
+## Site verification
+
+Use **Verify site**, complete any site check in the page below the toolbar, then choose **Return to app**. The app also checks once after the site page finishes loading. It returns automatically only when its own catalogue request succeeds, then retries your interrupted action. If access is still blocked, the window stays open and shows the result; closing it does not claim verification succeeded.
+
 ## Features copied from Android
 
 - Discover and category navigation: Movies, TV Shows, anime sub/dub movies/series and Audiobooks, with genre filters and sort controls.
